@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Desktop.UI", "Desktop.UI\Desktop.UI.csproj", "{9E6DB1B3-6174-40D0-B27B-5B6EAB77B1DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chess.Rules", "Chess.Rules\Chess.Rules.csproj", "{91421EB3-C61C-4D97-8EF3-23C452A31B84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.UI", "Web.UI\Web.UI.csproj", "{7CEA3755-007B-49B7-8731-52D704F4C2C3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E6DB1B3-6174-40D0-B27B-5B6EAB77B1DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E6DB1B3-6174-40D0-B27B-5B6EAB77B1DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E6DB1B3-6174-40D0-B27B-5B6EAB77B1DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E6DB1B3-6174-40D0-B27B-5B6EAB77B1DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91421EB3-C61C-4D97-8EF3-23C452A31B84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91421EB3-C61C-4D97-8EF3-23C452A31B84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91421EB3-C61C-4D97-8EF3-23C452A31B84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91421EB3-C61C-4D97-8EF3-23C452A31B84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CEA3755-007B-49B7-8731-52D704F4C2C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CEA3755-007B-49B7-8731-52D704F4C2C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CEA3755-007B-49B7-8731-52D704F4C2C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CEA3755-007B-49B7-8731-52D704F4C2C3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0760FE38-BCBD-4D05-B28B-DF99215D1FB6}
+	EndGlobalSection
+EndGlobal

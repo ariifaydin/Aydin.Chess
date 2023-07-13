@@ -1,0 +1,81 @@
+﻿@using Chess.Rules
+@using Chess.Rules.Sabitler;
+@using Chess.Rules.Taslar;
+@model Web.UI.Models.TahtaModel;
+@{
+    ViewBag.Title = "StrancTahtası";
+}
+
+@{
+    <div class="chessboard container">
+        <div class="row">
+            <div class="col-xs-12">
+       @for (int i = 1; i < 9; i++)
+       {
+            @for (int j = 1; j < 9; j++)
+            {
+                var koordinat = $"{i}{j}";
+                Kare kare = Model.Kareler.Where(k => k.Koordinat.X == j && k.Koordinat.Y == i).FirstOrDefault();
+             
+                if (j % 2 == 0)
+                {
+                    if (i % 2 == 0)
+                    {                   
+                        if(kare.Tas != null)
+                        {
+                            <div class="white" onclick="onClick(@j,@i,'true', '@Model.Id')" value=@koordinat>&#@kare.Tas.Resim</div>
+
+                        }
+                        else
+                        {
+                            <div class="white" onclick="onClick(@j,@i,'false', '@Model.Id')" value=@koordinat></div>
+                        }
+
+                    }
+                    else
+                    {
+                        if (kare.Tas != null)
+                        {
+                            <div class="black" onclick="onClick(@j,@i,'true', '@Model.Id')" value=@koordinat>&#@kare.Tas.Resim</div>
+
+                        }
+                        else
+                        {
+                            <div class="black" onclick="onClick(@j,@i,'false', '@Model.Id')" value=@koordinat></div>
+                        }
+
+                    }
+                }
+                else
+                {
+                    if (i % 2 == 0)
+                    {
+                        if (kare.Tas != null)
+                        {
+                            <div class="black" onclick="onClick(@j,@i,'true', '@Model.Id')" value=@koordinat>&#@kare.Tas.Resim</div>
+
+                        }
+                        else
+                        {
+                            <div class="black" onclick="onClick(@j,@i,'false', '@Model.Id')" value=@koordinat></div>
+                        }
+                    }
+                    else
+                    {
+                        if (kare.Tas != null)
+                        {
+                            <div class="white" onclick="onClick(@j,@i,'true', '@Model.Id')" value=@koordinat>&#@kare.Tas.Resim</div>
+
+                        }
+                        else
+                        {
+                            <div class="white" onclick="onClick(@j,@i,'false', '@Model.Id')" value=@koordinat></div>
+                        }
+                    }
+                }
+            }
+    }
+            </div> 
+        </div> 
+    </div>  
+}
