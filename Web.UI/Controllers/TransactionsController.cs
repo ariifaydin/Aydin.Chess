@@ -16,26 +16,31 @@ namespace Web.UI.Controllers
         {
             return View();
         }
-
+        [HttpPost]
         public IActionResult Login(LoginModel login)
         {
-            Users girisAlanı = db.Users.FirstOrDefault(i => i.Username == login.Username && i.Password == login.Password);
+            Users girisAlanı = db.Users.FirstOrDefault(i => i.Email == login.Email && i.Password == login.Password);
             if (girisAlanı != null)
             {
                 ViewBag.Durum = false;
 
-                return RedirectToAction("Tahta");
+                return View();
             }
             ViewBag.Durum = true;
+            return RedirectToAction("Tahta","Satranc");
+        }
 
-            //Users users = new Users();
-            //users.Id = login.Id;
-            //users.Username = login.Username;
-            //users.Password = login.Password;
-            //users.Email = login.Email;
-            //db.Users.Add(users);
-            //db.SaveChanges();
-            return RedirectToAction("Tahta");
+        public IActionResult Register(LoginModel kayit)
+        {
+            Users Users = new Users();
+            Users.Id = kayit.Id;
+            Users.Username = kayit.Username;
+            Users.Password = kayit.Password;
+            Users.Email = kayit.Email;
+
+            db.Users.Add(Users);
+            db.SaveChanges();
+            return RedirectToAction("Login");
         }
       
     }
